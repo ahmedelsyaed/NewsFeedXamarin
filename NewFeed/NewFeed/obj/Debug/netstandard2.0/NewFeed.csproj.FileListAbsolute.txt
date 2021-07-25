@@ -1,0 +1,15 @@
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\bin\Debug\netstandard2.0\NewFeed.deps.json
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\bin\Debug\netstandard2.0\NewFeed.dll
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\bin\Debug\netstandard2.0\NewFeed.pdb
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\NewFeed.csproj.AssemblyReference.cache
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\Views\FlyoutPage.xaml.g.cs
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\NewFeed.AssemblyInfoInputs.cache
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\NewFeed.AssemblyInfo.cs
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\NewFeed.csproj.CoreCompileInputs.cache
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\NewFeed.dll
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\NewFeed.pdb
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\Views\ArticlesSection.xaml.g.cs
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\NewFeed.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Solutions\source\repos\NewFeed\NewFeed\NewFeed\obj\Debug\netstandard2.0\Views\NewsDetailsView.xaml.g.cs

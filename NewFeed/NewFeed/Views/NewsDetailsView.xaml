@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="NewFeed.Views.NewsDetailsView">
+    <ScrollView>
+        <StackLayout>
+            <Frame HasShadow="false">
+                <Grid RowDefinitions="3*,auto,auto,auto">
+                    <Image Grid.Row="0" 
+                            HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Source="{Binding Article.urlToImage}"
+                               Aspect="AspectFill"/>
+                    <Label  Text="{Binding Article.title}" FontSize="Medium" Grid.Row="1" />
+                    <Label TextColor="DarkGray"  Grid.Row="2" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="By "/>
+                                <Span Text="{Binding Article.author}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Row="3" TextColor="DarkGray" Margin="0,15" Text="{Binding Article.description}"/>
+                </Grid>
+            </Frame>
+            <Button Text="Open Website" 
+                    Command="{Binding OpenWebSiteCommand}"
+                    BackgroundColor="Black" TextColor="White" VerticalOptions="EndAndExpand" Margin="10,25"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

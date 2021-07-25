@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+            
+             
+             x:Class="NewFeed.Views.ArticlesSection">
+    <Grid>
+        <CollectionView HorizontalOptions="FillAndExpand" x:Name="articlesCV"
+                       SelectionMode="Single"
+                        SelectionChangedCommand="{Binding ViewDetailsCommand}"
+                        SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference articlesCV}}"
+                        HorizontalScrollBarVisibility="Never"
+                        ItemSizingStrategy="MeasureAllItems"
+                        ItemsSource="{Binding ArticlesCollection}"
+                        ItemsUpdatingScrollMode="KeepItemsInView"
+                        VerticalOptions="CenterAndExpand">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout
+                        ItemSpacing="10"
+                        Orientation="Vertical"
+                        SnapPointsType="Mandatory" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame HasShadow="false" >
+                    <Grid RowDefinitions="6*,auto,auto,auto">
+                        <Image Grid.Row="0" 
+                            HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Source="{Binding urlToImage}"
+                               Aspect="AspectFill"/>
+
+                        <Label  Text="{Binding title}" FontSize="Medium" Grid.Row="1" />
+                            <Label TextColor="DarkGray"  Grid.Row="2" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="By "/>
+                                        <Span Text="{Binding author}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label TextColor="DarkGray" Text="{Binding publishedAt, StringFormat='{0:MMM dd, yyyy}'}" HorizontalOptions="End" Grid.Row="3" />
+
+                    </Grid>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+        <ActivityIndicator Color="Black"
+                           HeightRequest="50"
+                          VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           IsRunning="{Binding Loading}"
+                           IsVisible="{Binding Loading}"/>
+    </Grid>
+  
+</ContentPage>

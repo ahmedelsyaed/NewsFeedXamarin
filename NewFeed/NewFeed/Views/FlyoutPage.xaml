@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="http://prismlibrary.com"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  xmlns:views="clr-namespace:NewFeed.Views"
+                  
+                  
+                  x:Class="NewFeed.Views.FlyoutPage">
+
+    <MasterDetailPage.Master >
+        <ContentPage Title="Menue" BackgroundColor="SeaShell"  >
+            <StackLayout Padding="20,50">
+
+                <Grid ColumnDefinitions="70,auto" Margin="0" >
+                    <Image Grid.Column="0" Source="profile" HeightRequest="70" WidthRequest="70" HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"/>
+                    <StackLayout Grid.Column="1">
+                        <Label Text="Welcome" FontSize="Small" TextColor="DarkGray"/>
+                        <Label Text="Tony" FontSize="Medium" />
+                    </StackLayout>
+                </Grid>
+                <!-- TODO: // Update the Layout and add some real menu items  -->
+                <StackLayout Orientation="Horizontal" >
+                    <Image Source="explore" />
+                    <Label Text="Explore"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{prism:NavigateTo 'NavigationPage/ArticlesSection'}"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Source="live" />
+                    <Label Text="Live Chat"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Source="gallery" />
+                    <Label Text="Gallery"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Source="wishlist" />
+                    <Label Text="Wish List"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Image Source="onlineNews" />
+                    <Label Text="Explore Online News"/>
+                </StackLayout>
+            </StackLayout>
+            <ContentPage.Resources>
+                <ResourceDictionary>
+                    
+                    <Style TargetType="StackLayout">
+                        <Setter Property="Margin" Value="0,10"/>
+                    </Style>
+                    <Style TargetType="Image">
+                        <Setter Property="HeightRequest" Value="30"/>
+                        <Setter Property="WidthRequest" Value="30"/>
+                        <Setter Property="Aspect" Value="AspectFill"/>
+                    </Style>
+                    <Style TargetType="Label">
+                        <Setter Property="VerticalOptions" Value="Center"/>
+                        <Setter Property="VerticalTextAlignment" Value="Center"/>
+                        <Setter Property="Margin" Value="15,0"/>
+                    </Style>
+                </ResourceDictionary>
+            </ContentPage.Resources>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <views:ArticlesSection/>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>
